@@ -1,0 +1,23 @@
+// header
+header.main-header
+	.wrap
+		// language switcher
+		.language
+			p <a href="/">PT</a> <span class="separator">|</span> <a href="/en">EN</a>
+		div(class="menu-button" id="off")
+			i.fa.fa-bars
+		// Social network icons
+		.social-icons
+			a(href="https://github.com/flowck" target="_blank")
+				i.fa.fa-github-alt
+			a(href="https://twitter.com/flowck" target="_blank")
+				i.fa.fa-twitter
+			a(href="https://www.linkedin.com/pub/firmino-changani/96/6a5/8ba" target="_blank")
+				i.fa.fa-linkedin
+			a(href="mailto:flowck96@hotmail.com" target="_blank")
+				i.fa.fa-envelope-o
+
+.mobile-menu
+	.wrap
+		nav
+			ul.main-menu!=menu_lang()

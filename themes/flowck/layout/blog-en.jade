@@ -1,0 +1,25 @@
+include ./partial/head-blog
+	body
+		include ./partial/header
+
+		// Content
+		section.main-content
+			.wrap
+				//.column.profile
+					article
+						img(src="img/me.jpg", alt="hi-it's-me")
+						p Firmino Changani
+				.blog-wrap
+					//- site.categories.findOne({name: 'english'}).posts.sort('date', -1).limit(2).each(function(article){
+						div.post
+							h1.post-title
+								a(href=article.permalink)= article.title
+							.post-metadata
+								p!= '<i class="fa fa-calendar"></i> ' + date(page.date) + " " + '<i class="fa fa-comment"></i>' + '<a class="comment-count" href="'+ article.permalink +'#disqus_thread">...</a>'
+
+							.post-resume!= limit(article.content, article.limit)
+						hr
+					//- })
+					include ./partial/pagination
+
+		include ./partial/footer

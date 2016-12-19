@@ -1,0 +1,12 @@
+menu:
+	about: Who I am
+	projects: Projects
+	Blog: Blog
+	contact: Contact-me
+
+meta:
+	subtitle: My personal website :)
+
+pagination:
+	prev: Previous
+	next: Next

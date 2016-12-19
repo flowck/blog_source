@@ -1,0 +1,20 @@
+include ./partial/head-blog
+	body
+		include ./partial/header
+
+		// Content
+		section.main-content
+			.wrap
+				.blog-wrap
+					article(class="post" itemscope itemtype="http://schema.org/NewsArticle")
+						h1(class="post-title" itemprop="headline")
+							a(href=page.permalink, data-disqus-identifier=page.permalink)= page.title
+						div(class="post-metadata" itemprop="datePublished")
+							p!= '<i class="fa fa-calendar"></i> ' + page.datapost
+
+						div(class="post-content" itemprop="articleBody")!= page.content
+					hr
+					// Comments
+					include ./partial/comments
+
+		include ./partial/footer

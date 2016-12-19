@@ -1,0 +1,18 @@
+include ./partial/head
+	body
+		include ./partial/header
+
+		// Content
+		section.main-content
+			.wrap
+				//.column.profile
+					article
+						img(src="img/me.jpg", alt="hi-it's-me")
+						p Firmino Changani
+				.column.about-me
+					article.home!=page.content
+
+				.column.me-walking
+					article.home
+						img(src="/img/walking.png", alt="hi-ti's-me-walking")
+		include ./partial/footer

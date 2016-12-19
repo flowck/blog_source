@@ -1,0 +1,21 @@
+include ./partial/head
+	body
+		include ./partial/header
+
+		// Content
+		section.main-content
+			.wrap
+				.blog-wrap
+					- site.categories.findOne({name: 'portugues'}).posts.sort('idd', -1).limit(5).each(function(article){
+						article(class="post" itemscope itemtype="http://schema.org/NewsArticle")
+							h1(class="post-title" itemprop="headline")
+								a(href=article.permalink)= article.title
+							div(class="post-metadata" itemprop="datePublished")
+								p!= '<i class="fa fa-calendar"></i> ' + article.datapost
+
+							div(class="post-resume" itemprop="description")!= limit(article.content, article.limit)
+						hr
+					- })
+					include ./partial/pagination
+
+		include ./partial/footer

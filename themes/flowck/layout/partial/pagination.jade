@@ -1,0 +1,7 @@
+.pagination
+	if page.prev
+		a(href=url_for(page.prev_link) + "#posts")
+			button=__('pagination.prev')
+	if page.next
+		a(href=url_for(page.next_link) + "#posts")
+			button=__('pagination.next')

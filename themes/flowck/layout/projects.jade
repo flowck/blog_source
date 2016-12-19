@@ -1,0 +1,28 @@
+include ./partial/head
+	body
+		include ./partial/header
+
+		// Content
+		section.main-content
+			.wrap
+
+				.content
+					.page-title
+						h1!=page.name
+					.page-content
+						.projects
+							- site.categories.findOne({name: 'projects-website'}).posts.sort('year', -1).limit(5).each(function(project){
+								.project
+									a(href=project.link)
+										img(src=project.cover)
+									.project-title
+										a(href=project.link)
+											h2=project.title
+									.project-metadata
+										p= project.year + " | " + project.tech
+							- })
+						
+				.column.me-walking
+					article.home
+						img(src="/img/walking.png", alt="hi-ti's-me-walking")
+		include ./partial/footer
