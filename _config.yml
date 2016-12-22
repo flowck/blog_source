@@ -14,8 +14,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-#url: http://flowck.github.io/
-url: http://localhost:4000/
+url: http://flowck.github.io/
+#url: http://localhost:4000/
 root: /
 permalink: pt/blog/:title/
 permalink_defaults:
