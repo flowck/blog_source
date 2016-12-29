@@ -1,7 +1,7 @@
 title: "Como enviar emails com o Nodejs"
 datapost: 19/12/2016
 limit: 270
-shortdescription: No acto de desenvolvimento de uma aplicação em algum momento, dependendo do escopo do projecto, poderá ser necessário interagir com uma REST API.
+shortdescription: Entenda como enviar emails dentro de aplicações web desenvolvidas em Nodejs usando o módulo Nodemailer, que é um padrão dentro da comunidade.
 category: portugues
 cover: "/img/posts/nodejs-dark1.jpg"
 idd: 6
